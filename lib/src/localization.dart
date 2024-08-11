@@ -61,11 +61,11 @@ class Localization {
       res = _resolve(key);
     }
 
-    res = _replaceLinks(res);
-
     res = _replaceNamedArgs(res, namedArgs);
 
-    return _replaceArgs(res, args);
+    res = _replaceArgs(res, args);
+
+    return _replaceLinks(res);
   }
 
   String _replaceLinks(String res, {bool logging = true}) {
